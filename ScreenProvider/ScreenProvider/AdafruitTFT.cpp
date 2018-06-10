@@ -21,7 +21,6 @@ AdafruitTFT::AdafruitTFT()
 {
 }
 
-
 AdafruitTFT::~AdafruitTFT()
 {
 }
@@ -144,7 +143,6 @@ void AdafruitTFT::clear(Color color)
 
 	sendD(frame);
 }
-
 
 void AdafruitTFT::render(uint8_t* buffer, uint32_t pitch)
 {

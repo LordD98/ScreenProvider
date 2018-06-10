@@ -450,7 +450,6 @@ NTSTATUS BASIC_DISPLAY_DRIVER::InitializeAdafruitPiTFT()
 	return Status;
 }
 
-
 NTSTATUS BASIC_DISPLAY_DRIVER::SetWindow(int x, int y, int w, int h)
 {
 	NTSTATUS Status; 
@@ -487,7 +486,6 @@ NTSTATUS BASIC_DISPLAY_DRIVER::SetWindow(int x, int y, int w, int h)
 
 	return Status;
 }
-
 
 NTSTATUS BASIC_DISPLAY_DRIVER::StopDevice(VOID)
 {
@@ -527,7 +525,6 @@ VOID BASIC_DISPLAY_DRIVER::CleanUp()
 	}
     
 }
-
 
 NTSTATUS BASIC_DISPLAY_DRIVER::DispatchIoRequest(_In_  ULONG                 VidPnSourceId,
                                                  _In_  VIDEO_REQUEST_PACKET* pVideoRequestPacket)
@@ -739,7 +736,6 @@ NTSTATUS BASIC_DISPLAY_DRIVER::QueryAdapterInfo(_In_ CONST DXGKARG_QUERYADAPTERI
         }
     }
 }
-
 
 NTSTATUS BASIC_DISPLAY_DRIVER::CheckHardware()
 {
@@ -988,7 +984,6 @@ NTSTATUS BASIC_DISPLAY_DRIVER::GetEdid(D3DDDI_VIDEO_PRESENT_TARGET_ID TargetId)
 
     return Status;
 }
-
 
 VOID BASIC_DISPLAY_DRIVER::BlackOutScreen(D3DDDI_VIDEO_PRESENT_SOURCE_ID SourceId)
 {

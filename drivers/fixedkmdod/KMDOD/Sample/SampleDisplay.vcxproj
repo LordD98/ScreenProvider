@@ -270,6 +270,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Exclude="@(ClInclude)" Include="*.h;*.hpp;*.hxx;*.hm;*.inl;*.xsd" />
+    <ClInclude Include="..\bdd.hxx" />
+    <ClInclude Include="..\bdd_errorlog.hxx" />
+    <ClInclude Include="..\ili9341.hxx" />
+    <ClInclude Include="..\ntdef.hxx" />
+    <ClInclude Include="..\reshub.hxx" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
 </Project>
