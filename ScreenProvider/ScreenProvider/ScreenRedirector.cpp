@@ -11,6 +11,7 @@ ScreenRedirector::ScreenRedirector(uint32_t screenSizeX, uint32_t screenSizeY, S
     _screenInterface = screenInterface;
 }
 
+
 ScreenRedirector::~ScreenRedirector()
 {
 }
@@ -113,8 +114,8 @@ bool ScreenRedirector::processNextFrame()
 
     if (!_texture)
     {
-		DXGI_OUTDUPL_DESC odesc;
-		_duplication->GetDesc(&odesc);
+		DXGI_OUTDUPL_DESC desc;
+		_duplication->GetDesc(&desc);
 
 		D3D11_TEXTURE2D_DESC desc;
         desc.Width = static_cast<UINT>(_screenSizeX);
