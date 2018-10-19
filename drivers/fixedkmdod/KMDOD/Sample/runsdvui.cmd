@@ -1,0 +1,2 @@
+cd /d "G:\Users\Serverin Delhey\Documents\Visual Studio\Projects\ScreenProvider\drivers\fixedkmdod\KMDOD\Sample" &msbuild "SampleDisplay.vcxproj" /t:sdvViewer /p:configuration="Debug" /p:platform=Win32
+exit %errorlevel% 

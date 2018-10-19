@@ -317,7 +317,7 @@ NTSTATUS BDD_HWBLT::WriteDataIrp(PBYTE pBuffer, size_t bufferByteLength)
 	//Allocate IRP
 	_IRP* Irp = IoBuildSynchronousFsdRequest(IRP_MJ_WRITE,
 		m_spiDeviceObject,
-		pBuffer, bufferByteLength, NULL, &event, &IoStatus);
+		pBuffer, (ULONG)bufferByteLength, NULL, &event, &IoStatus);
 
 	PIO_STACK_LOCATION irpSp = IoGetNextIrpStackLocation(Irp);
 	irpSp->FileObject = m_spiFileObjectPointer;
@@ -960,7 +960,7 @@ HwExecutePresentDisplayOnly(
 		BYTE colorSet = 0x2C;
 		size_t screenWidth = ctx->ScreenWidth;
 		size_t screenHeight = ctx->ScreenHeight;
-		NTSTATUS Status = displaySource->SetWindow(0, 0, screenWidth, screenHeight);
+		NTSTATUS Status = displaySource->SetWindow(0, 0, (int)screenWidth, (int)screenHeight);
 		Status = displaySource->WriteCommandIrp(&colorSet, sizeof(colorSet));
 		Status = displaySource->WriteDataIrp((BYTE*)ctx->DstAddr, screenWidth*screenHeight * 2);
 	}
